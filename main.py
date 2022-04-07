@@ -14,10 +14,12 @@ for line in sys.stdin:
     print('Finish:', pdate(target))
     print('Total: ', pdate(delta))
     print("––––––––––––––––")
-    while a != '00:00.00':
+    while True:
         a = pdate((target - datetime.now()))
         print('Left:  ', a, end='\r' )
         sleep(1)
+        if a == '00:00.00':
+            break
 
     print('\nHow long, in minutes?')
 if __name__ == '__main__':
