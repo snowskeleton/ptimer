@@ -15,7 +15,7 @@ def pdate(date):
             hour = date.hour
         except:
             secs = date.seconds %  60
-            mins = date.seconds // 60
+            mins = date.seconds // 60 % 60
             hour = date.seconds // 3200
 
         a = ( f'{hour}'.zfill(2) +
